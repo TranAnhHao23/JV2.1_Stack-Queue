@@ -8,6 +8,12 @@ public class ReverseWord {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập chuỗi muốn đảo ngược: ");
         String mWord = sc.nextLine();
+        String newWord = revereString(mWord);
+        System.out.println(newWord);
+    }
+
+    private static String revereString(String mWord) {
+
         Stack<String> wStack = new Stack<>();
         char[] ch = mWord.toCharArray();
         for (int i = 0; i < ch.length; i++) {
@@ -17,7 +23,7 @@ public class ReverseWord {
         while (wStack.size() != 0){
             newWord += wStack.pop();
         }
-        System.out.println(newWord);
+        return newWord;
     }
 
 
