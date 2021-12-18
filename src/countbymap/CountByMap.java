@@ -7,15 +7,17 @@ import java.util.TreeMap;
 public class CountByMap {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Map<String, Integer> map = new TreeMap<>();
+
 
         System.out.println("Nhập 1 chuỗi vào đi: ");
         String word = sc.nextLine();
+        Map<String, Integer> map = countCharacter(word);
+        System.out.println(map);
+    }
 
+    private static Map<String, Integer> countCharacter(String word) {
+        Map<String, Integer> map = new TreeMap<>();
         char[] ch = word.toLowerCase().toCharArray();
-        for (int i = 0; i < ch.length; i++) {
-            System.out.print(ch[i] + " ");
-        }
 
         for (int i = 0; i < ch.length; i++) {
             int key = 1;
@@ -24,6 +26,6 @@ public class CountByMap {
             }
             map.put(String.valueOf(ch[i]),key);
         }
-        System.out.println(map);
+        return map;
     }
 }
