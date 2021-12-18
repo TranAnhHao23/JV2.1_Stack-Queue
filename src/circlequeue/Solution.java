@@ -1,3 +1,5 @@
+package circlequeue;
+
 public class Solution {
     private Queue queue = new Queue();
 
